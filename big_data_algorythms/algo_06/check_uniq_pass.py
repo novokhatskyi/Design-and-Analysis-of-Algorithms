@@ -22,7 +22,7 @@ def check_password_uniqueness(bloom_filter, passwords):
     results = {}
 
     for password in passwords:
-        if not isinstance(password, str) or password == "":
+        if not isinstance(password, str) or password.strip() == "":
             results[password] = "некоректне значення"
             continue
 
